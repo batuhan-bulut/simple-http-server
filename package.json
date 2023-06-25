@@ -1,0 +1,30 @@
+{
+  "name": "simple-http-server",
+  "description": "Purpose of this project is test the Authentication on the websites or common responses.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batuhan-bulut/simple-http-server.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "http",
+    "server"
+  ],
+  "author": "Batuhan Bulut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batuhan-bulut/simple-http-server/issues"
+  },
+  "homepage": "https://github.com/batuhan-bulut/simple-http-server#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1"
+  }
+}

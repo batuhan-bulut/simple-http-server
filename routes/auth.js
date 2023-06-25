@@ -1,0 +1,39 @@
+const express = require('express')
+const basicAuth = require('express-basic-auth')
+const router = express.Router()
+
+const logger = require('./../logger')
+let creds
+
+router.use("/basicAuth/:user/:pass",(req,res,next) => {
+    creds = {user:req.params.user, pass:req.params.pass}
+    next()
+})
+
+router.use("/basicAuth/:user/:pass", basicAuth({
+    authorizer: myAuthorizer,
+    unauthorizedResponse: getUnauthorizedResponse,
+    challenge: true,
+})
+)
+
+router.get("/basicAuth/:user/:pass", (req,res) => {
+    logger.info("Login Success!")
+    res.status(201).send("Auth Success!")
+})
+
+function myAuthorizer(username, password) {
+    const userMatches = basicAuth.safeCompare(username, creds.user)
+    const passwordMatches = basicAuth.safeCompare(password, creds.pass)
+
+    return userMatches & passwordMatches
+}
+
+function getUnauthorizedResponse(req) {
+    logger.info("Login Failed!")
+    return req.auth
+        ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
+        : 'No credentials provided'
+}
+
+module.exports = router
