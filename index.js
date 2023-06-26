@@ -2,12 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
+
+
 const logger = require('./logger')
 const authRouter =  require('./routes/auth')
 
 //Routers
 app.use("/auth", authRouter)
-
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // Simple console logger middleware
 app.use((req, res, next) => {
   logger.info(`${req.method} | ${req.url}`)

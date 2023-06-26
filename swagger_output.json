@@ -1,0 +1,49 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Simple HTTP Server",
+    "description": "Simple HTTP server for testing auth methods, broken certs, responses, requests etc."
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "tags":[
+    {
+       "name": "Auth",
+       "description": "Authentication Endpoints"
+    }
+  ],
+  "paths": {
+    "/auth/basicAuth/{user}/{pass}": {
+      "get": {
+        "tags": ["Auth"],
+        "description": "Testing basic header authentication with challenge enabled. (Keep asking until you enter correct)",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pass",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Success!"
+          },
+          "401": {
+            "description": "Unauthenticated. Please check the credentials again."
+          }
+        }
+      }
+    }
+  }
+}
