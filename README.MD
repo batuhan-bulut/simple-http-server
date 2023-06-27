@@ -3,7 +3,6 @@
 
 Purpose of this project is test the Authentication on the websites or common responses..
 
-
 ## How to Install
 
 You can simply run:
@@ -12,9 +11,20 @@ You can simply run:
  npm start
  ```
 
-Also I have nodemon in `npm run dev` if you're willing to use with nodemon.
+Also I have nodemon in `npm run dev` if you're willing to use with `nodemon`
 
 If you create/add/change the endpoints you can edit swagger definitions as comments and run `npm run swagger-autogen` for create the modified Swagger page.
+
+## How to Test
+
+I used [jest framework](https://jestjs.io/ "jest framework") to test my code. 
+
+To test it on your local you need to run the server and run the test code.
+
+* Open a terminal and run `npm start` (*This will start the server*)
+* Open a second terminal and run `npm test` (*This will start testing*)
+
+Note: I am using [axios](https://axios-http.com/ "axios") for make a requests.
 
 ## Details
 
@@ -33,6 +43,7 @@ If you create/add/change the endpoints you can edit swagger definitions as comme
     etc.
 ### Support Authentication methods
     Basic
+    Digest
     
 ### Bad Certificates
     Bad Certificates for testing

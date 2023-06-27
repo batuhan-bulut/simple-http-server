@@ -1,3 +1,5 @@
+require('dotenv').config()
+console.log(process.env)
 const express = require('express')
 const app = express()
 const port = 3000
@@ -28,7 +30,3 @@ app.use(function (err, req, res, next) {
 app.listen(port, () => {
   logger.info(`Server listening on http://localhost:${port}`)
 })
-
-
-
-
