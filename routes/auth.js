@@ -18,8 +18,12 @@ router.use("/basicAuth/:user/:pass", basicAuth({
 )
 
 router.get("/basicAuth/:user/:pass", (req,res) => {
+    //
     // #swagger.tags = ['Auth']
+    // #swagger.summary = 'GET request with Basic Auth'
     // #swagger.description = 'Testing basic header authentication with challenge enabled. (Keep asking until you enter correct)'
+    // #swagger.responses[200] = { description: 'Auth Successful.',}
+    // #swagger.responses[401] = { description: 'UnAuth Request.',}
     //
     logger.info("Login Success!")
     res.status(200).send("Auth Success!")
