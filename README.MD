@@ -4,6 +4,18 @@
 Purpose of this project is test the Authentication on the websites or common responses.
 
 
+## How to Install
+
+You can simply run:
+ ```
+ npm install
+ npm start
+ ```
+
+Also I have nodemon in `npm run dev` if you're willing to use with nodemon.
+
+If you create/add/change the endpoints you can edit swagger definitions as comments and run `npm run swagger-autogen` for create the modified Swagger page.
+
 ## Details
 
 ### Return known status codes (200, 301, 404, 500, etc.)
