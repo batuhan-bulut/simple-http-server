@@ -1,7 +1,7 @@
 
 # Simple HTTP / HTTPs Server
 
-Purpose of this project is test the Authentication on the websites or common responses.
+Purpose of this project is test the Authentication on the websites or common responses..
 
 
 ## How to Install
