@@ -41,6 +41,37 @@
           }
         }
       }
+    },
+    "/auth/digestAuth/{user}/{pass}": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "GET request with Digest Auth",
+        "description": "Testing digest header authentication with challenge enabled. (Keep asking until you enter correct)",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pass",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "401": {
+            "description": "UnAuth Request."
+          }
+        }
+      }
     }
   }
 }
