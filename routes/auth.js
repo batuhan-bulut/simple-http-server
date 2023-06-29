@@ -7,7 +7,8 @@ const utils = require("./../node_modules/http-auth/src/auth/utils")
 const logger = require('./../logger')
 let creds
 
-// Basic Auth
+
+// Hidden Basic Auth
 router.use("/hiddenbasicAuth/:user/:pass", (req, res, next) => {
     creds = {
         basic: {
@@ -25,7 +26,7 @@ router.use("/hiddenbasicAuth/:user/:pass", basicAuth({
     //challenge: true,
 })
 )
-// Basic Auth
+// Hidden Basic Auth
 router.get("/hiddenbasicAuth/:user/:pass", (req, res) => {
     //
     /* #swagger.security = [{
@@ -47,15 +48,6 @@ function hiddenResponse(req) {
     logger.info("Login Failed!")
     return 'Lorem Ipsum'
 }
-
-
-
-
-
-
-
-
-
 
 
 // Basic Auth
