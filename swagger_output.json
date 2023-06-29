@@ -11,6 +11,140 @@
     "http"
   ],
   "paths": {
+    "/methods/get": {
+      "get": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/post": {
+      "post": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/delete": {
+      "delete": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/head": {
+      "head": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/options": {
+      "options": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/patch": {
+      "patch": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/methods/put": {
+      "put": {
+        "tags": [
+          "Methods"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a 200 OK response",
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          }
+        }
+      }
+    },
+    "/auth/hiddenbasicAuth/{user}/{pass}": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "GET request with Basic Auth",
+        "description": "Testing basic header authentication with challenge enabled. (Keep asking until you enter correct)",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pass",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "401": {
+            "description": "UnAuth Request."
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
     "/auth/basicAuth/{user}/{pass}": {
       "get": {
         "tags": [

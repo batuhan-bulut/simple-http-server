@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env)
 const express = require('express')
 const app = express()
 const port = 3000
@@ -7,13 +6,10 @@ const port = 3000
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('./swagger_output.json')
 
-
 const logger = require('./logger')
 const authRouter =  require('./routes/auth')
+const methodRouter = require("./routes/methods")
 
-//Routers
-app.use("/auth", authRouter)
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // Simple console logger middleware
 app.use((req, res, next) => {
   logger.info(`${req.method} | ${req.url}`)
@@ -25,6 +21,11 @@ app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('Something broke!')
 })
+
+//Routers
+app.use("/methods", methodRouter)
+app.use("/auth", authRouter)
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 // Main app
 app.listen(port, () => {
