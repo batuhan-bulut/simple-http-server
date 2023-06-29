@@ -21,6 +21,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -35,6 +38,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -49,6 +55,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -63,6 +72,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -77,6 +89,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -91,6 +106,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -105,6 +123,9 @@
         "responses": {
           "200": {
             "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -203,6 +224,193 @@
           },
           "401": {
             "description": "UnAuth Request."
+          }
+        }
+      }
+    },
+    "/custom/get/{responseCode}": {
+      "get": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/custom/post/{responseCode}": {
+      "post": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
+          }
+        }
+      }
+    },
+    "/custom/delete/{responseCode}": {
+      "delete": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/custom/head/{responseCode}": {
+      "head": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/custom/options/{responseCode}": {
+      "options": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/custom/patch/{responseCode}": {
+      "patch": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/custom/put/{responseCode}": {
+      "put": {
+        "tags": [
+          "Custom"
+        ],
+        "summary": "Returns Request Headers",
+        "description": "Returns Request Headers as a responseCode",
+        "parameters": [
+          {
+            "name": "responseCode",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auth Successful."
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
