@@ -10,6 +10,7 @@ const logger = require('./logger')
 const authRouter =  require('./routes/auth')
 const methodRouter = require("./routes/methods")
 const customRouter = require("./routes/customResponses")
+const reqRouter = require("./routes/reqInspection")
 
 // Simple console logger middleware
 app.use((req, res, next) => {
@@ -27,7 +28,13 @@ app.use(function (err, req, res, next) {
 app.use("/methods", methodRouter)
 app.use("/auth", authRouter)
 app.use("/custom", customRouter)
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+app.use("/req", reqRouter)
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.all('*', function(req, res){
+  res.redirect("../docs")
+});
 
 // Main app
 app.listen(port, () => {
