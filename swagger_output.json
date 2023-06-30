@@ -244,11 +244,23 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
           }
         }
       }
@@ -306,11 +318,23 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
           }
         }
       }
@@ -331,11 +355,23 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
           }
         }
       }
@@ -356,11 +392,23 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
           }
         }
       }
@@ -381,11 +429,23 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
           }
         }
       }
@@ -406,11 +466,37 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Auth Successful."
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "100-199": {
+            "description": "Informational responses"
+          },
+          "200-299": {
+            "description": "Successful responses"
+          },
+          "300 - 399": {
+            "description": "Redirection messages"
+          },
+          "400-499": {
+            "description": "Client error responses"
+          },
+          "500-599": {
+            "description": "Server error responses "
+          }
+        }
+      }
+    },
+    "/req/ip": {
+      "get": {
+        "tags": [
+          "Other"
+        ],
+        "summary": "Returns IP address of requester",
+        "description": "Returns IP address of requester",
+        "responses": {
+          "200": {
+            "description": "IP address"
           }
         }
       }
