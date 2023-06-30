@@ -14,6 +14,13 @@ You can simply run:
 Also I have nodemon in `npm run dev` if you're willing to use with `nodemon`
 
 If you create/add/change the endpoints you can edit swagger definitions as comments and run `npm run swagger-autogen` for create the modified Swagger page.
+## Docker Install Steps
+
+You can run theses commands:
+```
+docker build . -t batuhan-bulut/simple-http-server
+docker run -p 3000:3000 batuhan-bulut/simple-http-server
+```
 
 ## How to Test
 
