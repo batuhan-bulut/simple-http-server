@@ -16,10 +16,12 @@ Also I have nodemon in `npm run dev` if you're willing to use with `nodemon`
 If you create/add/change the endpoints you can edit swagger definitions as comments and run `npm run swagger-autogen` for create the modified Swagger page.
 ## Docker Install Steps
 
+Dockerized version: [Docker Hub](https://hub.docker.com/r/bulutbatuhan/simple-server "Docker Hub")
+
 You can run theses commands:
 ```
-docker build . -t batuhan-bulut/simple-http-server
-docker run -p 3000:3000 batuhan-bulut/simple-http-server
+docker pull bulutbatuhan/simple-server
+docker run -p 3000:3000 bulutbatuhan/simple-server
 ```
 
 ## How to Test
@@ -32,8 +34,6 @@ To test it on your local you need to run the server and run the test code.
 * Open a second terminal and run `npm test` (*This will start testing*)
 
 Note: I am using [axios](https://axios-http.com/ "axios") for make a requests.
-
-Dockerized version: [Docker Hub](https://hub.docker.com/r/bulutbatuhan/simple-server "Docker Hub")
 
 ## Details
 
