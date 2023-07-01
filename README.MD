@@ -33,6 +33,8 @@ To test it on your local you need to run the server and run the test code.
 
 Note: I am using [axios](https://axios-http.com/ "axios") for make a requests.
 
+Dockerized version: [Docker Hub](https://hub.docker.com/r/bulutbatuhan/simple-server "Docker Hub")
+
 ## Details
 
 ### Return known status codes (200, 301, 404, 500, etc.)
@@ -51,10 +53,4 @@ Note: I am using [axios](https://axios-http.com/ "axios") for make a requests.
 ### Support Authentication methods
     Basic
     Digest
-    
-### Bad Certificates
-    Bad Certificates for testing
-
-### API definition
-    API definition file for importing
-    API test page from browser
+    Hidden
