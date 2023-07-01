@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "Simple Http Server",
+    "description": "[ docker pull bulutbatuhan/simple-http-server ]<br>[ docker run -p 3000:3000 bulutbatuhan/simple-server ]<br>[ https://github.com/batuhan-bulut/simple-http-server ]"
   },
   "host": "localhost:3000",
   "basePath": "/",
